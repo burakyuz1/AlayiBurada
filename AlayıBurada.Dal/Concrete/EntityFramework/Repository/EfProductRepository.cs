@@ -18,9 +18,19 @@ namespace AlayıBurada.Dal.Concrete.EntityFramework.Repository
             // Böylece sadece generic olarak kullanmak istediğim classları başka repository oluşturmadan kullanabilirim. (ÖRN: SADECE CRUD İŞLEMLERİ OLAN CLASSLAR)
         }
 
+        public Product AddToBasket(int id)
+        {
+            return context.Product.SingleOrDefault(x => x.ProductId == id && x.ProductStatus == true);
+        }
+
         public List<Product> GetProductsByCategoryId(int id)
         {
             return context.Product.Where(x => x.ProductStatus == true && x.Category.CategoryId == id).ToList();
+        }
+
+        public List<Product> GetProductsByProductId(int id)
+        {
+            return context.Product.Where(x => x.ProductStatus == true && x.ProductId == id).ToList();
         }
 
         public List<Product> ProductList()
