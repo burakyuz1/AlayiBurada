@@ -16,7 +16,7 @@ It is not very powerful on the FrontEnd side because the main purpose of the cou
 
 
 
-## USE SCENARIO
+## USAGE SCENARIO
 
 After logging in, the user can actively add, delete, and clean his cart. You can make purchases in your cart. Card transactions are not added. It can bring and list products by category. You can actively see your cart.
 After logging in to the Admin, they can have complete control of the site by performing the necessary CRUD operations related to the Product, Customer, Category.
